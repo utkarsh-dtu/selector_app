@@ -1,0 +1,23 @@
+align-self (stretch and all)
+tabIndex (focus and all)
+flex-grow
+min-height
+
+.options.show (what is this? in CSS)
+calc (in CSS)
+
+onBlur => to do something when i click away from that div
+
+onChange(undefined)
+
+e.stopPropagation() -> it will stop the click event from going to the the parent div
+for example, in our project, the container div (which had an onClick, setting the drop down to open) contained the button (and button contained an onClick which would clear the contents) so if i click on the button, the onClick of that button will be triggered, and this event will pass on to the parent as well. so to stop this propagation we use the e.stopPropagation() method
+
+why moving .options.selected before .options.highlighted overrides it?
+
+Ans : When multiple CSS classes are applied to an HTML element and they have conflicting properties, the class that is defined last in the stylesheet will take precedence over the previous classes. This is known as the "cascade" in CSS.
+
+So in your example, if one class sets the color to blue and another sets it to red, the class that is defined last in the stylesheet and applied to the element will determine the color. For example, if the conflicting classes are defined as follows:
+
+
+did not understand the useEffect for the keyboard accessibility
