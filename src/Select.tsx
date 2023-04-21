@@ -22,8 +22,8 @@ type SelectProps = {
 } & (SingleSelectProps | MultipleSelectProps);
 
 export function Select({ multiple, value, onChange, options }: SelectProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [highlightedIndex, setHighlightedIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState<Boolean>(false);
+  const [highlightedIndex, setHighlightedIndex] = useState<number>(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
   function clearOptions() {
@@ -78,7 +78,6 @@ export function Select({ multiple, value, onChange, options }: SelectProps) {
       }
     };
 
-    
     containerRef.current?.addEventListener("keydown", handler);
 
     return () => {
